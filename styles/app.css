@@ -23,6 +23,7 @@ html {
   }
   .sidebar ul {
     height: auto;
+    opacity: 1 !important;
   }
   .main {
     height: 100%;
@@ -39,7 +40,6 @@ html {
 
 .main {
   grid-area: main;
-  padding: 2rem 0 2rem;
 }
 
 .footer {
@@ -48,10 +48,12 @@ html {
 
 .sidebar ul {
   height: 0;
+  opacity: 0;
 }
 
 .sidebar ul.show {
   height: auto;
+  opacity: 1;
 }
 
 .page {

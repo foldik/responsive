@@ -1,15 +1,32 @@
 @media only screen and (min-width: 810px) {
   .sidebar ul {
-    padding: 1rem;
+    padding: 1rem 0;
+  }
+  img {
+    padding: 0 !important;
+  }
+  .main {
+    padding: 2rem 0 2rem;
+  }
+  .header, h1, h2, h3, h4, h5, h6, p, pre, form {
+    padding: 1rem 2rem !important;
   }
 }
 
-.header, .sidebar ul.show, h1, h2, h3, h4, h5, h6, p, pre, form {
+.header, h1, h2, h3, h4, h5, h6, p, pre, form {
   padding: 1rem;
 }
 
-li+li {
-  padding: 1rem 0 0;
+.sidebar ul li:first-child {
+  padding-top: 1rem;
+}
+
+.sidebar ul li:last-child {
+  padding-bottom: 1rem;
+}
+
+li {
+  padding: 0.5rem 3rem 0.5rem 2rem;
 }
 
 img {

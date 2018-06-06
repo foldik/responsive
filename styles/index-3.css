@@ -1,0 +1,12 @@
+.citation-line {
+  text-align: center;
+}
+
+.citation-line .citation {
+  display: inline-block;
+  padding: 0.1rem 0.7rem;
+  border: 1px solid white;
+  border-radius: 1px;
+  background-color: #26A69A;
+  color: #E0F2F1;
+}
