@@ -1,0 +1,7 @@
+form input[type="radio"] {
+  vertical-align: middle;
+}
+
+form label {
+  vertical-align: middle;
+}

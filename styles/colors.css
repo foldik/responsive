@@ -48,6 +48,10 @@ hr {
   background-color: black;
 }
 
+form {
+  background-color: purple;
+}
+
 @media only screen and (min-width: 810px) {
   .page {
     border: 4px solid black;

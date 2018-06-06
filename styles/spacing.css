@@ -4,7 +4,7 @@
   }
 }
 
-.header, .sidebar ul.show, h1, h2, h3, h4, h5, h6, p, pre {
+.header, .sidebar ul.show, h1, h2, h3, h4, h5, h6, p, pre, form {
   padding: 1rem;
 }
 
@@ -14,4 +14,16 @@ li+li {
 
 img {
   padding: 0 1rem;
+}
+
+.answer {
+  padding: 0.5rem;
+}
+
+p {
+  line-height: 1.6rem;
+}
+
+p+p {
+  padding: 0 1rem 1rem;
 }
