@@ -12,6 +12,7 @@
   <link href="styles/colors.css" rel="stylesheet">
   <link href="styles/spacing.css" rel="stylesheet">
   <link href="styles/form-1.css" rel="stylesheet">
+  <link href="styles/collapsible-code.css" rel="stylesheet">
 </head>
 
 <body>
@@ -99,6 +100,41 @@ public class Main {
             <label for="ans-4">Eligendi optio cumque nihil impedit.</label>
           </div>
         </form>
+        <div class="collapsible-code">
+          <p class="code-header">
+            <span>scripts/app/app.js</span>
+            <span class="toggle-button">
+              <span class="opened">&#9660;</span><span class="closed">&#9664;</span>
+            </span>
+          </p>
+          <pre><code class="language-javascript">for (let i = 0; i < 10; i++) {
+  console.log('Hello #' + i)
+}</code></pre>
+        </div>
+        <div class="collapsible-code closed">
+          <p class="code-header">
+            <span>js/utils/squares.js</span>
+            <span class="toggle-button">
+              <span class="opened">&#9660;</span><span class="closed">&#9664;</span>
+            </span>
+          </p>
+          <pre><code class="language-javascript">for (let i = 0; i < 10; i++) {
+  console.log(i * i)
+}</code></pre>
+        </div>
+        <div class="collapsible-code">
+          <p class="code-header">
+            <span>js/utils/cubes.js</span>
+            <span class="toggle-button">
+              <span class="opened">&#9660;</span><span class="closed">&#9664;</span>
+            </span>
+          </p>
+          <pre><code class="language-javascript">for (let i = 0; i < 10; i++) {
+  console.log(i * i * i)
+}</code></pre>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
     </div>
     <div class="footer">
@@ -107,6 +143,7 @@ public class Main {
   </div>
 
   <script src="scripts/app.js"></script>
+  <script src="scripts/collapsible-code.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,31 @@
+code {
+  font-family: monospace, sans-serif;
+  line-height: 16px;
+}
+
+.collapsible-code.closed .code-header .toggle-button .opened {
+  display: none;
+}
+
+.collapsible-code .code-header .toggle-button .opened {
+  display: inline;
+}
+
+.collapsible-code .code-header .toggle-button .closed {
+  display: none;
+}
+
+.collapsible-code.closed .code-header .toggle-button .closed {
+  display: inline;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible-code.closed pre {
+  height: 0;
+  padding: 0 !important;
+  overflow: hidden;
+}
