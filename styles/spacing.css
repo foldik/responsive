@@ -13,7 +13,7 @@
   }
 }
 
-.header, h1, h2, h3, h4, h5, h6, p, pre, form {
+.header, h1, h2, h3, h4, h5, h6, pre, form {
   padding: 1rem;
 }
 
@@ -42,5 +42,5 @@ p {
 }
 
 p+p {
-  padding: 0 1rem 1rem;
+  padding: 0 2rem 1rem !important;
 }

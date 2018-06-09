@@ -9,7 +9,7 @@ html {
 
 .container {
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
   grid-template-areas: "header" "sidebar" "main" "footer";
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto;
