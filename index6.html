@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Teach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet">
+  <link href="styles/app.css" rel="stylesheet">
+  <link href="styles/spacing.css" rel="stylesheet">
+  <link href="styles/form-1.css" rel="stylesheet">
+  <link href="styles/colors-3.css" rel="stylesheet">
+  <link href="styles/index6.css" rel="stylesheet">
+  <link href="styles/collapsible-code.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <span>Code</span>
+    </div>
+    <div class="sidebar">
+      <ul>
+        <li><a data-page="/gettingStarted">Java</a></li>
+        <li><a data-page="/gettingStarted">Python</a></li>
+        <li><a data-page="/code">JavaScript</a></li>
+        <li><a data-page="/markdownSyntax">HTML</a></li>
+        <li><a data-page="/loremIpsum">CSS</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="page">
+        <div class="post">
+          <p class="title">Lorem for</p>
+          <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <div class="collapsible-code closed">
+            <p class="code-header">
+              <span><code>js/utils/squares.js</code></span>
+              <span class="toggle-button">
+                <span class="opened">&#9660;</span><span class="closed">&#9664;</span>
+              </span>
+            </p>
+            <pre><code class="language-javascript">for (let i = 0; i < 10; i++) {
+  console.log(i * i)
+}</code></pre>
+          </div>
+          <div class="collapsible-code closed">
+            <p class="code-header">
+              <span><code>js/utils/squares.js</code></span>
+              <span class="toggle-button">
+                <span class="opened">&#9660;</span><span class="closed">&#9664;</span>
+              </span>
+            </p>
+            <pre><code class="language-javascript">for (let i = 0; i < 10; i++) {
+  console.log(i * i)
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <span>Code</span>
+    </div>
+  </div>
+  <script src="scripts/collapsible-code.js"></script>
+</body>
+
+</html>
