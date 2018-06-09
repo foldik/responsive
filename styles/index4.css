@@ -1,0 +1,44 @@
+.test-form .question {
+  display: block;
+  padding-bottom: 1.5rem;
+}
+
+form input[type="radio"] {
+  vertical-align: middle;
+}
+
+form label {
+  vertical-align: middle;
+  line-height: 1.6rem;
+}
+
+pre {
+  background-color: #0D47A1;
+  color: white;
+  margin: 1rem 0;
+  border-radius: 3px;
+}
+
+hr {
+  margin: 2rem 0;
+}
+
+.question-number {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 0.5rem !important;
+}
+
+.button-holder {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.button-holder button {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background-color: #1DE9B6;
+  border-radius: 2px;
+}
