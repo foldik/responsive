@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Teach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css" />
+  <link href="styles/messenger.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <span>Menu</span>
+    </div>
+    <div class="sidebar">
+      <ul>
+        <li><a data-page="/gettingStarted">Getting Started</a></li>
+        <li><a data-page="/code">Code</a></li>
+        <li><a data-page="/markdownSyntax">Markdown Syntax</a></li>
+        <li><a data-page="/loremIpsum">Lorem Ipsum</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <p class="message blue left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="code-message">
+        <pre><code class="java">package hello;
+
+public class Hello {
+  public static void main(String[] args) {
+    System.out.pintln("Hey");
+    new Builder().hello().hello().hello().build();
+  }
+
+  public static class Builder {
+
+      public Builder hello() {
+        return this;
+      }
+
+      public void build() {
+        System.out.println("Built");
+      }
+  }
+}</code></pre>
+      </div>
+      <p class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </div>
+    <div class="footer">
+      <!-- <i class="mdi mdi-plus plus-button">
+        <div class="additional-send-items">
+          <p class="option">GIF</p>
+          <p class="option">CODE</p>
+        </div>
+      </i> -->
+      <i class="gif-button">
+        <span>gif</span>
+        <div class="gif-chooser">
+          <img src="images/classic.gif" alt="Classic">
+          <img src="images/doctor.gif" alt="Dance">
+          <img src="images/doctor-who-again.gif" alt="My head is so stupid">
+          <img src="images/im-very-good.gif" alt="I'm very good">
+        </div>
+      </i>
+      <textarea class="message-input" type="text" name="" value="" placeholder="Type your message here..." rows="1"></textarea>
+      <i class="mdi mdi-send send-button"></i>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    (function() {
+      hljs.initHighlightingOnLoad();
+    }())
+  </script>
+  <script>
+    (function() {
+      document.querySelector('.header')
+        .addEventListener('click', function() {
+          document.querySelector('.sidebar').classList.toggle('show')
+        })
+
+      document.querySelector('.gif-button')
+        .addEventListener('click', function(event) {
+          event.stopPropagation()
+          document.querySelector('.gif-chooser').classList.add('show')
+        })
+
+      document.querySelector('.main')
+        .addEventListener('click', function(event) {
+          event.stopPropagation()
+          document.querySelector('.gif-chooser').classList.remove('show')
+        })
+
+      document.querySelector('.send-button')
+        .addEventListener('click', function(event) {
+          event.stopPropagation()
+          let main = document.querySelector('.main')
+          if (main.children.length > 0 && document.querySelector('.message-input').value.trim().length > 0) {
+            const newMessage = document.createElement('p')
+            newMessage.classList.add('message')
+            newMessage.classList.add('blue')
+            newMessage.classList.add('left')
+            newMessage.innerText = document.querySelector('.message-input').value
+            document.querySelector('.main').insertBefore(newMessage, main.firstChild)
+            document.querySelector('.message-input').value = ''
+          }
+        })
+
+      document.querySelector('.message-input').addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+          event.stopPropagation()
+          let main = document.querySelector('.main')
+          if (main.children.length > 0 && document.querySelector('.message-input').value.trim().length > 0) {
+            const newMessage = document.createElement('p')
+            newMessage.classList.add('message')
+            newMessage.classList.add('blue')
+            newMessage.classList.add('left')
+            newMessage.innerText = document.querySelector('.message-input').value
+            document.querySelector('.main').insertBefore(newMessage, main.firstChild)
+            document.querySelector('.message-input').value = ''
+          }
+        }
+      });
+    }())
+  </script>
+</body>
+
+</html>
