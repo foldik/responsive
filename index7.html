@@ -20,10 +20,12 @@
     </div>
     <div class="sidebar">
       <ul>
-        <li><a data-page="/gettingStarted">Getting Started</a></li>
-        <li><a data-page="/code">Code</a></li>
-        <li><a data-page="/markdownSyntax">Markdown Syntax</a></li>
-        <li><a data-page="/loremIpsum">Lorem Ipsum</a></li>
+        <li><a data-page="/gettingStarted">Chat</a></li>
+        <li><a data-page="/code">partners</a></li>
+        <li><a data-page="/markdownSyntax">will</a></li>
+        <li><a data-page="/loremIpsum">be</a></li>
+        <li><a data-page="/loremIpsum">here</a></li>
+        <li><a data-page="/loremIpsum">later</a></li>
       </ul>
     </div>
     <div class="main">
@@ -67,10 +69,10 @@ public class Hello {
       <i class="gif-button">
         <span>gif</span>
         <div class="gif-chooser">
-          <img src="images/classic.gif" alt="Classic">
-          <img src="images/doctor.gif" alt="Dance">
-          <img src="images/doctor-who-again.gif" alt="My head is so stupid">
-          <img src="images/im-very-good.gif" alt="I'm very good">
+          <img class="gif" src="images/classic.gif" alt="Classic">
+          <img class="gif" src="images/doctor.gif" alt="Dance">
+          <img class="gif" src="images/doctor-who-again.gif" alt="My head is so stupid">
+          <img class="gif" src="images/im-very-good.gif" alt="I'm very good">
         </div>
       </i>
       <textarea class="message-input" type="text" name="" value="" placeholder="Type your message here..." rows="1"></textarea>
@@ -133,9 +135,26 @@ public class Hello {
             document.querySelector('.message-input').value = ''
           }
         }
-      });
+      })
+
+
+      document.querySelectorAll('.gif').forEach(function(gif) {
+        gif.addEventListener('click', function(event) {
+          console.log('Hey');
+          event.stopPropagation()
+          const newImage = document.createElement('img')
+          newImage.classList.add('img-message')
+          newImage.src = event.target.src
+          const newMessage = document.createElement('p')
+          newMessage.appendChild(newImage)
+          newMessage.classList.add('left')
+          document.querySelector('.main').insertBefore(newMessage, document.querySelector('.main').firstChild)
+          document.querySelector('.gif-chooser').classList.remove('show')
+        })
+      })
     }())
   </script>
+  <script src="scripts/shepherd-boy.js" charset="utf-8"></script>
 </body>
 
 </html>

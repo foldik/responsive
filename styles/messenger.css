@@ -68,6 +68,12 @@ body {
   line-height: 1.3rem;
 }
 
+.img-message {
+  max-width: 90%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
 .code-message {
   max-width: 90%;
   border-radius: 1rem;
@@ -78,14 +84,17 @@ body {
   margin-bottom: 1rem;
 }
 
-.message+.code-message {
+.message+.code-message, .message+.img-message {
   margin-top: 1rem;
 }
 
-.message.blue.left {
-  align-self: flex-end;
+.message.blue {
   background-color: #5E35B1;
   color: white;
+}
+
+.left {
+  align-self: flex-end;
 }
 
 pre {
@@ -140,7 +149,7 @@ pre code {
   display: flex;
   flex-direction: column-reverse;
   bottom: 0;
-  width: 0;
+  width: 180px;
   max-height: 0;
   overflow: auto;
   border-radius: 5px;
@@ -148,7 +157,6 @@ pre code {
 }
 
 .footer .gif-button .gif-chooser.show {
-  width: 180px;
   max-height: 320px;
 }
 
@@ -174,6 +182,18 @@ pre code {
 .footer .plus-button .additional-send-items.show {} */
 
 @media only screen and (min-width: 810px) {
+  .container {
+    grid-template-areas: "header header" "sidebar main" "sidebar footer";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+  .sidebar {
+    height: auto;
+    padding: 0.5rem 0;
+  }
+  .sidebar ul li {
+    padding: 0.5rem 2rem;
+  }
   ::-webkit-scrollbar {
     width: 3px;
   }
@@ -185,5 +205,12 @@ pre code {
   }
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
+  }
+  .img-message {
+    display: inline-block;
+    max-width: auto;
+    margin: auto;
+    padding: auto;
+    border-radius: 1rem;
   }
 }
