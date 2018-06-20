@@ -28,29 +28,87 @@ body {
   grid-template-rows: auto auto 1fr auto;
 }
 
+/* Header */
+
 .header {
   grid-area: header;
-  padding: 1rem 2rem;
+  display: flex;
+  padding: 0.75rem 1rem;
   background-color: #311B92;
   color: white;
 }
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.avatar.big {
+  width: 4rem;
+  height: 4rem;
+}
+
+.user-name {
+  margin: auto 0.5rem;
+}
+
+.menu-button {
+  margin: auto 0 auto auto;
+  font-size: 1.2rem;
+}
+
+/* Sidebar */
 
 .sidebar {
   grid-area: sidebar;
   height: 0;
   overflow: hidden;
   background-color: #5E35B1;
-  color: white;
 }
 
 .sidebar.show {
   height: auto;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5rem;
 }
 
 .sidebar.show ul li {
-  padding: 0.5rem 2rem;
+  padding: 1rem 1rem;
 }
+
+.chat-item {
+  display: flex;
+  background-color: white;
+}
+
+.chat-item+.chat-item {
+  margin-top: 0.5rem;
+}
+
+.message-inormations {
+  position: relative;
+  padding: 0.5rem;
+}
+
+.message-inormations .message-preview {
+  max-width: 200px;
+  margin: auto 0.5rem;
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.message-inormations .message-time {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.8rem;
+}
+
+/* Main */
 
 .main {
   grid-area: main;
@@ -169,23 +227,6 @@ pre code {
   border-bottom: 1px solid #ccc;
 }
 
-/* .footer .plus-button {
-  display: inline-block;
-  position: relative;
-} */
-
-/* .footer .plus-button .additional-send-items {
-  position: absolute;
-  display: none;
-  bottom: 0;
-  padding: 1rem;
-  background-color: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 4px;
-}
-
-.footer .plus-button .additional-send-items.show {} */
-
 @media only screen and (min-width: 810px) {
   .container {
     grid-template-areas: "header header" "sidebar main" "sidebar footer";
@@ -194,10 +235,10 @@ pre code {
   }
   .sidebar {
     height: auto;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.5rem;
   }
   .sidebar ul li {
-    padding: 0.5rem 2rem;
+    padding: 1rem 1rem;
   }
   ::-webkit-scrollbar {
     width: 3px;

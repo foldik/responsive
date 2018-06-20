@@ -16,16 +16,28 @@
 <body>
   <div class="container">
     <div class="header">
-      <span>Menu</span>
+      <img class="avatar" src="images/kristof.jpg" alt="Kristof">
+      <p class="user-name">Kristóf</p>
+      <p class="mdi mdi-menu menu-button"></p>
     </div>
     <div class="sidebar">
       <ul>
-        <li><a data-page="/gettingStarted">Chat</a></li>
-        <li><a data-page="/code">partners</a></li>
-        <li><a data-page="/markdownSyntax">will</a></li>
-        <li><a data-page="/loremIpsum">be</a></li>
-        <li><a data-page="/loremIpsum">here</a></li>
-        <li><a data-page="/loremIpsum">later</a></li>
+        <li class="chat-item">
+          <img class="avatar big" src="images/kristof.jpg" alt="Kristof">
+          <div class="message-inormations">
+            <p class="user-name">Földi Kristóf</p>
+            <p class="message-preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p class="message-time">17:22</p>
+          </div>
+        </li>
+        <li class="chat-item">
+          <img class="avatar big" src="images/kristof.jpg" alt="Kristof">
+          <div class="message-inormations">
+            <p class="user-name">Földi Kristóf</p>
+            <p class="message-preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p class="message-time">17:22</p>
+          </div>
+        </li>
       </ul>
     </div>
     <div class="main">
@@ -60,12 +72,6 @@ public class Hello {
 
     </div>
     <div class="footer">
-      <!-- <i class="mdi mdi-plus plus-button">
-        <div class="additional-send-items">
-          <p class="option">GIF</p>
-          <p class="option">CODE</p>
-        </div>
-      </i> -->
       <i class="gif-button">
         <span>gif</span>
         <div class="gif-chooser">
