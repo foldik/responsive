@@ -148,6 +148,7 @@ public class Hello {
           const newMessage = document.createElement('p')
           newMessage.appendChild(newImage)
           newMessage.classList.add('left')
+          newMessage.classList.add('image-container')
           document.querySelector('.main').insertBefore(newMessage, document.querySelector('.main').firstChild)
           document.querySelector('.gif-chooser').classList.remove('show')
         })

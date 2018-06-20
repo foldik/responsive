@@ -68,10 +68,15 @@ body {
   line-height: 1.3rem;
 }
 
+.image-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .img-message {
-  max-width: 90%;
   border-radius: 1rem;
-  margin-bottom: 1rem;
+  display: inline-block;
+  margin-right: 0;
 }
 
 .code-message {
@@ -84,7 +89,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.message+.code-message, .message+.img-message {
+.message+.code-message {
   margin-top: 1rem;
 }
 
@@ -205,12 +210,5 @@ pre code {
   }
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
-  .img-message {
-    display: inline-block;
-    max-width: auto;
-    margin: auto;
-    padding: auto;
-    border-radius: 1rem;
   }
 }
