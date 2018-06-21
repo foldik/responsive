@@ -1,0 +1,60 @@
+.main {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: auto;
+  padding: 0 1rem;
+}
+
+.message {
+  max-width: 90%;
+  padding: 0.7rem;
+  background-color: #EEEEEE;
+  border-radius: 1rem;
+  line-height: 1.3rem;
+}
+
+.image-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.img-message {
+  border-radius: 1rem;
+  display: inline-block;
+  margin-right: 0;
+}
+
+.code-message {
+  max-width: 90%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.message+.message {
+  margin-bottom: 1rem;
+}
+
+.message+.code-message {
+  margin-top: 1rem;
+}
+
+.message.blue {
+  background-color: #5E35B1;
+  color: white;
+}
+
+.left {
+  align-self: flex-end;
+}
+
+pre {
+  display: block;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  border-radius: 1rem;
+}
+
+pre code {
+  padding: 0.8rem !important;
+  line-height: 1.2rem;
+}

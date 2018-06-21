@@ -1,0 +1,56 @@
+.sidebar {
+  height: 0;
+  overflow: hidden;
+  background-color: #5E35B1;
+}
+
+.sidebar.show {
+  height: auto;
+  padding: 0.5rem 0.5rem;
+}
+
+.sidebar.show ul li {
+  padding: 1rem 1rem;
+}
+
+.chat-item {
+  display: flex;
+  background-color: white;
+}
+
+.chat-item+.chat-item {
+  margin-top: 0.5rem;
+}
+
+.message-inormations {
+  position: relative;
+  padding: 0.5rem;
+}
+
+.message-inormations .message-preview {
+  max-width: 200px;
+  margin: auto 0.5rem;
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.message-inormations .message-time {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 810px) {
+  .sidebar {
+    height: auto;
+    padding: 0.5rem 0.5rem;
+  }
+  .sidebar ul li {
+    padding: 1rem 1rem;
+  }
+}

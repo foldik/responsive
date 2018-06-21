@@ -1,0 +1,85 @@
+.footer {
+  display: flex;
+  padding: 1rem 1rem 1.5rem;
+}
+
+.footer .input-holder {
+  position: relative;
+  width: 100%;
+}
+
+.footer .message-input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 1.2rem;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  resize: none;
+}
+
+.footer .send-button, .footer .plus-button, .footer .gif-button {
+  margin: auto;
+  padding: 0 0.3rem;
+  font-size: 1.5rem;
+  color: #5E35B1;
+}
+
+.footer .gif-button {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer .gif-button .gif-chooser {
+  position: absolute;
+  display: flex;
+  flex-direction: column-reverse;
+  bottom: 2rem;
+  width: 180px;
+  max-height: 0;
+  overflow: auto;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.footer .gif-button .gif-chooser.show {
+  max-height: 320px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.footer .gif-button .gif-chooser img {
+  border-bottom: 1px solid #ccc;
+}
+
+.footer .plus-button {
+  position: relative;
+  padding: 0 0.4rem 0 0;
+}
+
+.footer .plus-button .more-options-chooser {
+  position: absolute;
+  display: flex;
+  flex-direction: column-reverse;
+  bottom: 2.5rem;
+  max-height: 0;
+  overflow: auto;
+  border-radius: 5px;
+  transition: all 0.2s;
+  background: white;
+  font-size: 1.1rem;
+}
+
+.footer .plus-button .more-options-chooser.show {
+  max-height: 320px;
+  padding: 0.5rem 0.7rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.footer .plus-button .more-options-chooser .option {
+  display: block;
+  padding: 0.5rem 0;
+  color: grey;
+}
